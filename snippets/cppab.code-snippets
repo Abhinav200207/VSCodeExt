@@ -1,0 +1,1 @@
+{"hello.cpp   414535e6-11fe-41c3-a0c8-819fae2ec54b":{"prefix":"!hello.cpp","body":["#include <bits/stdc++.h>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    cout << \"Hello world!\" << endl;\r\n}"],"description":"code by user"}}

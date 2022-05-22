@@ -1,0 +1,86 @@
+{
+	"name": "ab-code-templates",
+	"displayName": "Ab Code Templates",
+	"description": "generates the code of different programing language",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.54.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/abhinavvs"
+	},
+	"icon": "icon.png",
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:ab-code-templates.helloWorld",
+		"onCommand:ab-code-templates.createSnippethtml",
+		"onCommand:ab-code-templates.createSnippetpython",
+		"onCommand:ab-code-templates.createSnippetcpp",
+		"onCommand:ab-code-templates.createSnippetjs"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "ab-code-templates.helloWorld",
+				"title": "Hello World"
+			},
+			{
+				"command": "ab-code-templates.createSnippethtml",
+				"title": "Create Snippet html"
+			},
+			{
+				"command": "ab-code-templates.createSnippetpython",
+				"title": "Create Snippet python"
+			},
+			{
+				"command": "ab-code-templates.createSnippetcpp",
+				"title": "Create Snippet cpp"
+			},
+			{
+				"command": "ab-code-templates.createSnippetjs",
+				"title": "Create Snippet js"
+			}
+		],
+		"snippets": [
+			{
+				"language": "html",
+				"path": "./snippets/snippets.code-snippets"
+			},
+			{
+				"language": "python",
+				"path": "./snippets/pythonab.code-snippets"
+			},
+			{
+				"language": "cpp",
+				"path": "./snippets/cppab.code-snippets"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/jsab.code-snippets"
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.54.0",
+		"@types/glob": "^7.2.0",
+		"@types/mocha": "^9.1.1",
+		"@types/node": "14.x",
+		"eslint": "^8.14.0",
+		"glob": "^8.0.1",
+		"mocha": "^9.2.2",
+		"typescript": "^4.6.4",
+		"@vscode/test-electron": "^2.1.3"
+	},
+	"dependencies": {
+		"uuid": "^8.3.2"
+	}
+}
